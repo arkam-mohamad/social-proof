@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+}
+main{
+  background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-color: hsl(0, 0%, 100%);
+  width:900px;
+  height: 600px;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding:100px 50px 50px 50px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #91919147, -5px 10px 10px #91919147;
+}
+.content{
+  flex: 1;
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+h1{
+  color: hsl(300, 43%, 22%);
+  width: 280px;
+}
+p{
+  color: hsl(300, 43%, 22%);
+}
+.rating{
+  flex: 1;
+  width: 450px;
+}
+.top, .center, .bottom{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: hsla(302, 10%, 53%, 0.2);
+  margin: 10px 0 ;
+  padding: 10px 0 10px 10px;
+  border-radius: 5px;
+}
+.top{
+  translate: -40px;
+}
+.center{
+  translate: -20px;
+}
+h2{
+  font-size: 14px;
+}
+.review{
+  flex: 2;
+  display: flex;
+  min-width: 800px;
+}
+.left, .middle, .right{
+  background-color: hsl(300, 43%, 22%);
+  width: 250px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.left{
+  translate: 0 -15px;
+}
+.right{
+  translate: 0 15px;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.profile img{
+  border-radius: 50%;
+  width: 50px;
+}
+h3{
+  color: #FFF;
+  margin: 5px 0;
+  font-size: 16px;
+}
+h4{
+  color: hsl(333, 80%, 67%);
+  font-size: 14px;
+}
+.review p{
+  color: #FFF;
+}
+
+@media screen and (max-width:800px) {
+  main, .content, .rating, .review{
+    flex-direction: column;
+  }
+  main{
+    flex-direction: column;
+    width: 90vw;
+    flex-wrap: nowrap;
+    height: fit-content;
+    align-items: center;
+    gap: 20px;
+  }
+  .content{
+    align-items: center;
+  }
+  h1{
+    text-align: center;
+  }
+  .content p{
+    text-align: center;
+  }
+  .top{
+    translate: 0;
+  }
+  .center{
+    translate: 0;
+  }
+  .rating{
+    width: 50vw;
+    align-items: center;
+  }
+  .review{
+    align-items: center;
+  }
+
+}
